@@ -1,9 +1,9 @@
 $(document).ready(()=>{
 
-$(window).resize(function(){
+$(window).resize(() =>{
 	
 	if($(this).width()<=550){
-		$("body").html( "<img class='replaced_image' src='toggler.png' style='height:4%;width;10px'>" );
+		$("body").html( "<img id='replaced_image' src='toggler.png' style='height:4%;width;10px'>" );
 		event.preventDefault();
 	}
 	
@@ -12,12 +12,17 @@ $(window).resize(function(){
     // Removing table from DOM when window resized to above 500px
     //$( "#dynamicTable" ).remove();
 	
-	$(".navigation").appendTo("body");
+	location.reload(true);
 	
   }
 	
 });
 
+$("#replaced_image").click(()=>{
+	
+	$("#navigation").css("display", "flex");
+	
+});
 
 
 });
